@@ -29,10 +29,6 @@ public class Parser {
     }
 
 
-    // private static boolean check() {
-
-    // }
-
 
     public static String parse(String inStr) {
         curStr = new String(inStr);

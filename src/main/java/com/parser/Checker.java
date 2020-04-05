@@ -1,7 +1,7 @@
 package com.parser;
 
 public class Checker {
-    private static String str;
+    public static String str;
 
     public static boolean check(String inStr) {
         str = inStr;
@@ -11,12 +11,12 @@ public class Checker {
         } catch (MySyntaxException ex) {
             System.out.println("SYNTAX ERROR");
             System.out.println(ex.getMessage());
-            System.out.println(str);
+//            System.out.println(str);
             return false;
         } catch (MyTypeException ex) {
             System.out.println("Type ERROR");
             System.out.println(ex.getMessage());
-            System.out.println(str);
+//            System.out.println(str);
             return  false;
         }
 
@@ -111,7 +111,7 @@ public class Checker {
         }
 
         if (i == 0) {
-            throw new MyTypeException("should be number");
+            throw new MyTypeException("should be a number");
         } else {
             str = str.substring(i);
         }
@@ -131,7 +131,7 @@ public class Checker {
         ) {
             str = str.substring(1);
         } else {
-            throw new MySyntaxException("should be operation");
+            throw new MySyntaxException("should be an operation");
         }
     }
 

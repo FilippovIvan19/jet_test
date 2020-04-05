@@ -10,8 +10,10 @@ public class Main {
         String inStr = in.next();
         in.close();
 
-        Checker.check(inStr);
-        String outStr = Parser.parse(inStr);
+        String outStr = "";
+        if (Checker.check(inStr)) {
+            outStr = Parser.parse(inStr);
+        }
 
         System.out.println(outStr);
     }
